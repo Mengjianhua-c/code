@@ -1,3 +1,6 @@
+### 原理
+比较两个相邻的元素，将值大的元素交换到右边
+
 ### 时间复杂度
 
 1.如果我们的数据正序，只需要走一趟即可完成排序。所需的比较次数C和记录移动次数M均达到最小值，即：Cmin=n-1;Mmin=0;所以，冒泡排序最好的时间复杂度为O(n)。
@@ -7,16 +10,16 @@
 
 ```py
 i = input()
-        a = i.split(',')
-        for aidx in range(len(a)):
+a = i.split(',')
+for aidx in range(len(a)):
 
-            for idx, item in enumerate(a):
-                if idx < len(a)-1-aidx:
-                    if item > a[idx+1]:
-                        a[idx] = a[idx+1]
-                        a[idx+1] = item
-                else:
-                    break
-        print(a)
+    for idx, item in enumerate(a):
+        if idx < len(a)-1-aidx:
+            if item > a[idx+1]:
+                a[idx] = a[idx+1]
+                a[idx+1] = item
+        else:
+            break
+print(a)
 
 ```
